@@ -1,0 +1,70 @@
+:root {
+    --squares-per-side: 16;
+    --main-color: #323232;
+    --secondary-color: #fcf9ec;
+    --tertiary-color: #54ecc4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: var(--secondary-color);
+    background-image: url(background.jpg);
+    background-position: 100%;
+    margin: 0px;
+}
+
+.container {
+    margin: 5px 15%;
+    height: 960px;
+    width: 960px;
+    opacity: .6;
+    background-color: white;
+}
+
+.sketchpad {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--squares-per-side), 1fr);
+    grid-template-rows: repeat(var(--squares-per-side), 1fr);
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+.hover-shadow-box-animation {
+    display: inline-block;
+    background: white;
+    text-transform: uppercase;
+    border: 2px solid black;
+    font-size: 2em;
+    font-weight: 10em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15%;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    margin-top: 30px;
+    margin: 10px;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.hover-shadow-box-animation:hover,
+.hover-shadow-box-animation:focus,
+.hover-shadow-box-animation:active {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+    transform: scale(1.2);
+}
